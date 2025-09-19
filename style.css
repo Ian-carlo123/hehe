@@ -63,7 +63,7 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: url('Images/1.jpg') center/cover no-repeat fixed;
+  background: url('images/1.jpg') center/cover no-repeat fixed;
 }
 .slide .overlay {
   position: absolute;
