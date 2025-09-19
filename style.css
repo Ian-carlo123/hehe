@@ -63,7 +63,7 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: url('images/1.jpg') center/cover no-repeat fixed;
+  background: url('Images/1.jpg') center/cover no-repeat fixed;
 }
 .slide .overlay {
   position: absolute;
@@ -129,7 +129,7 @@ footer {
   min-height: 100vh;
   text-align: center;
   color: white;
-  background: url('images/1.jpg') center/cover no-repeat;
+  background: url('Images/1.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -201,7 +201,7 @@ footer {
 /* Tribal Border Accent */
 .accent-border {
   height: 20px;
-  background-image: url("data:image/svg+xml;utf8,\
+  background-image: url("data:Image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' width='100' height='20'>\
       <rect width='100' height='20' fill='%23c27a3b'/>\
       <path d='M0 20 L10 0 L20 20 Z' fill='%23f5efe6'/>\
@@ -217,7 +217,7 @@ footer {
 /* Section with woven texture */
 .section-woven {
   background: var(--beige);
-  background-image: url("data:image/svg+xml;utf8,\
+  background-image: url("data:Image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>\
       <rect width='40' height='40' fill='%23f5efe6'/>\
       <path d='M0 20 H40' stroke='%23c27a3b' stroke-width='4'/>\
@@ -236,7 +236,7 @@ footer {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-image: url("data:image/svg+xml;utf8,\
+  background-image: url("data:Image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'>\
       <rect x='0' y='0' width='50' height='50' fill='none' stroke='%23b65a3b' stroke-width='4'/>\
       <path d='M0 50 L50 0' stroke='%236b8a6f' stroke-width='4'/>\
