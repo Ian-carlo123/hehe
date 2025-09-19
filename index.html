@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Woven Heritage — Tagolwanen Weavers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/1.jpg" as="image">
+
+</head>
+
+<body class="hero-page">
+  <div class="overlay"></div>
+  <div class="centered">
+    <h1>The Woven Heritage</h1>
+    <p class="subtitle">Celebrating the Tagolwanen Women Weavers of Bukidnon</p>
+    <p class="lead">Discover the artistry, resilience, and cultural identity preserved through each strand of handwoven banig.</p>
+    <nav class="nav">
+      <a href="slide1.html" class="btn">Explore</a>
+    </nav>
+  </div>
+  <script>
+    // Add fade-in on load
+    document.body.classList.add("fade-in");
+  
+    // Capture all internal links
+    document.querySelectorAll("a").forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener("click", function (e) {
+          // Only apply if it's not an anchor link (#)
+          if (this.getAttribute("href").charAt(0) !== "#") {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = this.href;
+            }, 500); // matches fadeOut animation duration
+          }
+        });
+      }
+    });
+  </script>
+  
+</body>
+</html>

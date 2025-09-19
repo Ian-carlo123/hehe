@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About Us — The Woven Heritage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/1.jpg" as="image">
+
+</head>
+
+<body class="slide about" style="background-image:url('images/1.jpg');">
+  <div class="overlay"></div>
+  <div class="two-col">
+    <div class="content">
+      <h1 class="slide-title">Who We Are</h1>
+      <p class="lead", style="color:black;">
+        The <strong>Tagolwanen Women Weavers Association</strong> is a collective of Indigenous women from Bukidnon who continue the centuries-old tradition of weaving. 
+      </p>
+      <p>
+        Through their craft, they sustain both their livelihood and cultural identity. Each woven mat carries stories of ancestry, resilience, and community strength.
+      </p>
+      <p>
+        <strong>Location:</strong> Km. 4 Sayre Highway, Casisang, Malaybalay City, Bukidnon.<br>
+        <strong>Contact:</strong> tagolwanenweavers@gmail.com
+      </p>
+
+      <blockquote>
+        “Every strand woven is a memory preserved, and every mat is a living archive of our heritage.”
+      </blockquote>
+
+      <nav class="nav">
+        <a href="index.html" class="btn">← Back</a>
+        <a href="slide2.html" class="btn">Next →</a>
+      </nav>
+    </div>
+  </div>
+  <script>
+    // Add fade-in on load
+    document.body.classList.add("fade-in");
+  
+    // Capture all internal links
+    document.querySelectorAll("a").forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener("click", function (e) {
+          // Only apply if it's not an anchor link (#)
+          if (this.getAttribute("href").charAt(0) !== "#") {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = this.href;
+            }, 500); // matches fadeOut animation duration
+          }
+        });
+      }
+    });
+  </script>
+  
+</body>
+</html>

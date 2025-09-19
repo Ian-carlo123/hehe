@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Support — The Woven Heritage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/1.jpg" as="image">
+</head>
+
+<body class="slide support">
+  <div class="overlay"></div>
+  <div class="content card">
+    <h2>Support Our Mission</h2>
+    <p>
+      Every woven piece tells a story of culture, resilience, and identity. 
+      By supporting the Tagolwanen Women Weavers Association, you are not just 
+      buying a product—you are preserving heritage and empowering Indigenous women.
+    </p>
+
+    <div class="btn-group">
+      <a class="btn" href="#shop">🧺 Shop Now</a>
+      <a class="btn " href="#learn">📖 Learn More</a>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Tagolwanen Women Weavers Association | All Rights Reserved</p>
+    </footer>
+
+    <nav class="nav">
+      <a href="slide2.html" class="btn">← Back</a>
+    </nav>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Add fade-in on load
+    document.body.classList.add("fade-in");
+  
+    // Capture all internal links
+    document.querySelectorAll("a").forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener("click", function (e) {
+          // Only apply if it's not an anchor link (#)
+          if (this.getAttribute("href").charAt(0) !== "#") {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = this.href;
+            }, 500); // matches fadeOut animation duration
+          }
+        });
+      }
+    });
+  </script>
+  
+</body>
+</html>

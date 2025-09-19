@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — The Woven Heritage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/1.jpg" as="image">
+
+</head>
+
+<body class="slide gallery">
+  <div class="overlay"></div>
+  <section class="gallery-section">
+    <header class="gallery-header">
+      <h2>A Glimpse of Our Collection</h2>
+      <p>Each weave tells a story — of tradition, resilience, and artistry passed down through generations of Tagolwanen women.</p>
+    </header>
+
+    <div class="gallery-grid">
+      <div class="tile"><img src="images/3.jpg" alt="Banig mat" data-caption="Banig — a handwoven mat"><div class="caption"><span>Banig</span></div></div>
+      <div class="tile"><img src="images/4.jpg" alt="Weaving process" data-caption="The weaving process"><div class="caption"><span>Process</span></div></div>
+      <div class="tile"><img src="images/5.jpg" alt="Weaver portrait" data-caption="A proud Tagolwanen weaver"><div class="caption"><span>Portrait</span></div></div>
+      <div class="tile"><img src="images/6.jpg" alt="Pattern" data-caption="Traditional weaving pattern"><div class="caption"><span>Pattern</span></div></div>
+    </div>
+
+    <nav class="nav">
+      <a href="slide1.html" class="btn">← Back</a>
+      <a href="slide3.html" class="btn">Next →</a>
+    </nav>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Add fade-in on load
+    document.body.classList.add("fade-in");
+  
+    // Capture all internal links
+    document.querySelectorAll("a").forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener("click", function (e) {
+          // Only apply if it's not an anchor link (#)
+          if (this.getAttribute("href").charAt(0) !== "#") {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = this.href;
+            }, 500); // matches fadeOut animation duration
+          }
+        });
+      }
+    });
+  </script>
+  
+</body>
+</html>
